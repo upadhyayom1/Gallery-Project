@@ -4,12 +4,12 @@ import axios from "axios";
 const Feed = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3000/posts").then((response) => {
+    axios.get("https://gallery-project-l4br.onrender.com/posts").then((response) => {
       setPosts(response.data.posts);
     });
   }, []);
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/posts/${id}`);
+    await axios.delete(`https://gallery-project-l4br.onrender.com/posts/${id}`);
     setPosts(posts.filter((post) => post._id !== id));
   };
 

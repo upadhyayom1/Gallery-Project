@@ -7,7 +7,7 @@ const uploadPicture = () => {
   const handleSubmit=async (e)=>{
     e.preventDefault();
     const formdata=new FormData(e.target);
-    await axios.post("http://localhost:3000/create-post", formdata  );
+    await axios.post("https://gallery-project-l4br.onrender.com/create-post", formdata  );
     navigate('/posts');
   }
 
